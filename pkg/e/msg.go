@@ -1,9 +1,11 @@
 package e
 
 type Response struct {
-	Code    int         `json:"code"`
-	Message string      `json:"message"`
-	Data    interface{} `json:"data"`
+	StatusId      int         `json:"code"`
+	Code          int         `json:"code"`
+	StatusMessage string      `json:"message"`
+	dateTime      int         `json:"code"`
+	ResponseData  interface{} `json:"data"`
 }
 
 type APIException struct {
@@ -53,10 +55,12 @@ func newAPIException(code int, errorCode int, message string) *APIException {
 	}
 }
 
-func newResponse(code int, message string, data interface{}) *Response {
+func newResponse(statusId int, code int, message string, time int, data interface{}) *Response {
 	return &Response{
-		Code:    code,
-		Message: message,
-		Data:    data,
+		StatusId:      statusId,
+		Code:          code,
+		StatusMessage: message,
+		dateTime:      time,
+		ResponseData:  data,
 	}
 }
