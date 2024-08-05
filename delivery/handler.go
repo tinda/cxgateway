@@ -2,8 +2,8 @@ package delivery
 
 import (
 	"github.com/codingXiang/configer"
-	"github.com/codingXiang/cxgateway/pkg/util"
 	"github.com/gin-gonic/gin"
+	"github.com/tinda/cxgateway/pkg/util"
 )
 
 type HttpHandler interface {
