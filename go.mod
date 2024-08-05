@@ -1,4 +1,4 @@
-module github.com/codingXiang/cxgateway
+module github.com/tinda/cxgateway
 
 go 1.13
 
