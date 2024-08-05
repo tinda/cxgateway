@@ -2,7 +2,7 @@ package i18n
 
 import (
 	"fmt"
-	"io/ioutil"
+	"os"
 
 	"github.com/nicksnyder/go-i18n/v2/internal/plural"
 
@@ -26,7 +26,7 @@ type Bundle struct {
 	matcher          language.Matcher
 }
 
-// artTag is the language tag used for artifical languages
+// artTag is the language tag used for artificial languages
 // https://en.wikipedia.org/wiki/Codes_for_constructed_languages
 var artTag = language.MustParse("art")
 
@@ -52,14 +52,14 @@ func (b *Bundle) RegisterUnmarshalFunc(format string, unmarshalFunc UnmarshalFun
 // LoadMessageFile loads the bytes from path
 // and then calls ParseMessageFileBytes.
 func (b *Bundle) LoadMessageFile(path string) (*MessageFile, error) {
-	buf, err := ioutil.ReadFile(path)
+	buf, err := os.ReadFile(path)
 	if err != nil {
 		return nil, err
 	}
 	return b.ParseMessageFileBytes(buf, path)
 }
 
-// MustLoadMessageFile is similar to LoadTranslationFile
+// MustLoadMessageFile is similar to LoadMessageFile
 // except it panics if an error happens.
 func (b *Bundle) MustLoadMessageFile(path string) {
 	if _, err := b.LoadMessageFile(path); err != nil {
@@ -133,4 +133,12 @@ func (b *Bundle) addTag(tag language.Tag) {
 // of all the translations loaded into the bundle
 func (b *Bundle) LanguageTags() []language.Tag {
 	return b.tags
+}
+
+func (b *Bundle) getMessageTemplate(tag language.Tag, id string) *MessageTemplate {
+	templates := b.messageTemplates[tag]
+	if templates == nil {
+		return nil
+	}
+	return templates[id]
 }
