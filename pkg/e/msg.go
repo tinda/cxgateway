@@ -1,10 +1,12 @@
 package e
 
+import "time"
+
 type Response struct {
-	StatusId      int         `json:"code"`
+	StatusId      int         `json:"status_id"`
 	Code          int         `json:"code"`
 	StatusMessage string      `json:"message"`
-	dateTime      int         `json:"code"`
+	dateTime      time.Time   `json:"time"`
 	ResponseData  interface{} `json:"data"`
 }
 
@@ -55,7 +57,7 @@ func newAPIException(code int, errorCode int, message string) *APIException {
 	}
 }
 
-func newResponse(statusId int, code int, message string, time int, data interface{}) *Response {
+func newResponse(statusId int, code int, message string, time time.Time, data interface{}) *Response {
 	return &Response{
 		StatusId:      statusId,
 		Code:          code,
