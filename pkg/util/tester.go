@@ -3,8 +3,8 @@ package util
 import (
 	"bytes"
 	"encoding/json"
-	"github.com/codingXiang/cxgateway/pkg/e"
 	"github.com/gin-gonic/gin"
+	"github.com/tinda/cxgateway/pkg/e"
 	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
@@ -30,7 +30,7 @@ func NewHttpTester(router *gin.Engine) HttpTesterInterface {
 	}
 }
 
-//Get 模擬Get Request的動作
+// Get 模擬Get Request的動作
 func (h *HttpTester) GET(uri string) (int, *e.Response) {
 
 	var (
@@ -60,7 +60,7 @@ func (h *HttpTester) GET(uri string) (int, *e.Response) {
 	return statusCode, response
 }
 
-//POST 模擬Post Request的動作
+// POST 模擬Post Request的動作
 func (h *HttpTester) POST(uri string, param interface{}) (int, *e.Response) {
 	var (
 		statusCode int
@@ -91,7 +91,7 @@ func (h *HttpTester) POST(uri string, param interface{}) (int, *e.Response) {
 	return statusCode, response
 }
 
-//POST_FORM 模擬Post Request的動作
+// POST_FORM 模擬Post Request的動作
 func (h *HttpTester) POST_FORM(uri string, param interface{}) (int, *e.Response) {
 	var (
 		statusCode int
@@ -121,7 +121,8 @@ func (h *HttpTester) POST_FORM(uri string, param interface{}) (int, *e.Response)
 
 	return statusCode, response
 }
-//PUT 模擬Post Request的動作
+
+// PUT 模擬Post Request的動作
 func (h *HttpTester) PUT(uri string, param interface{}) (int, *e.Response) {
 	var (
 		statusCode int
@@ -152,7 +153,7 @@ func (h *HttpTester) PUT(uri string, param interface{}) (int, *e.Response) {
 	return statusCode, response
 }
 
-//PATCH 模擬 Patch Request的動作
+// PATCH 模擬 Patch Request的動作
 func (h *HttpTester) PATCH(uri string, param interface{}) (int, *e.Response) {
 	var (
 		statusCode int
@@ -183,7 +184,7 @@ func (h *HttpTester) PATCH(uri string, param interface{}) (int, *e.Response) {
 	return statusCode, response
 }
 
-//DELETE 模擬 Delete Request的動作
+// DELETE 模擬 Delete Request的動作
 func (h *HttpTester) DELETE(uri string, param interface{}) (int, *e.Response) {
 	var (
 		statusCode int

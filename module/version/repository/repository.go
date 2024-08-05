@@ -1,9 +1,9 @@
 package repository
 
 import (
-	"github.com/codingXiang/cxgateway/model"
-	"github.com/codingXiang/cxgateway/module/version"
 	"github.com/codingXiang/go-orm"
+	"github.com/tinda/cxgateway/model"
+	"github.com/tinda/cxgateway/module/version"
 	"io/ioutil"
 	"strings"
 )

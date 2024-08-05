@@ -3,12 +3,12 @@ package repository
 import (
 	"encoding/json"
 	"github.com/codingXiang/configer"
-	"github.com/codingXiang/cxgateway/model"
-	"github.com/codingXiang/cxgateway/module/auto_register"
-	"github.com/codingXiang/cxgateway/pkg/util"
 	"github.com/codingXiang/go-logger"
 	"github.com/codingXiang/go-orm"
 	"github.com/spf13/viper"
+	"github.com/tinda/cxgateway/model"
+	"github.com/tinda/cxgateway/module/auto_register"
+	"github.com/tinda/cxgateway/pkg/util"
 	"strings"
 )
 

@@ -1,9 +1,9 @@
 package i18n
 
 import (
-	"github.com/codingXiang/cxgateway/pkg/e"
-	"github.com/codingXiang/cxgateway/pkg/util"
 	"github.com/codingXiang/gogo-i18n"
+	"github.com/tinda/cxgateway/pkg/e"
+	"github.com/tinda/cxgateway/pkg/util"
 )
 
 type (

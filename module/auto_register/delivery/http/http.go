@@ -2,15 +2,15 @@ package http
 
 import (
 	"github.com/astaxie/beego/validation"
-	cx "github.com/codingXiang/cxgateway/delivery"
-	"github.com/codingXiang/cxgateway/model"
-	"github.com/codingXiang/cxgateway/module/auto_register"
-	"github.com/codingXiang/cxgateway/module/auto_register/delivery"
-	"github.com/codingXiang/cxgateway/pkg/e"
-	"github.com/codingXiang/cxgateway/pkg/i18n"
-	"github.com/codingXiang/cxgateway/pkg/util"
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
+	cx "github.com/tinda/cxgateway/delivery"
+	"github.com/tinda/cxgateway/model"
+	"github.com/tinda/cxgateway/module/auto_register"
+	"github.com/tinda/cxgateway/module/auto_register/delivery"
+	"github.com/tinda/cxgateway/pkg/e"
+	"github.com/tinda/cxgateway/pkg/i18n"
+	"github.com/tinda/cxgateway/pkg/util"
 )
 
 const (

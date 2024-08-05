@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/codingXiang/cxgateway/model"
-	"github.com/codingXiang/cxgateway/module/auto_register"
+	"github.com/tinda/cxgateway/model"
+	"github.com/tinda/cxgateway/module/auto_register"
 )
 
 type AutoRegisteredService struct {

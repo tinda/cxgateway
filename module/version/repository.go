@@ -1,6 +1,6 @@
 package version
 
-import "github.com/codingXiang/cxgateway/model"
+import "github.com/tinda/cxgateway/model"
 
 type Repository interface {
 	GetServerVersion() (*model.Version, error)

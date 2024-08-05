@@ -2,13 +2,13 @@ package main
 
 import (
 	"github.com/codingXiang/configer"
-	. "github.com/codingXiang/cxgateway/delivery/http"
-	"github.com/codingXiang/cxgateway/module/version/delivery/http"
-	"github.com/codingXiang/cxgateway/module/version/repository"
-	"github.com/codingXiang/cxgateway/module/version/service"
 	"github.com/codingXiang/go-logger"
 	"github.com/codingXiang/go-orm"
 	"github.com/codingXiang/gogo-i18n"
+	. "github.com/tinda/cxgateway/delivery/http"
+	"github.com/tinda/cxgateway/module/version/delivery/http"
+	"github.com/tinda/cxgateway/module/version/repository"
+	"github.com/tinda/cxgateway/module/version/service"
 )
 
 func init() {

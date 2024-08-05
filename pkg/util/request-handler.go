@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/beego/beego/v2/core/validation"
-	"github.com/codingXiang/cxgateway/pkg/e"
 	"github.com/gin-gonic/gin"
+	"github.com/tinda/cxgateway/pkg/e"
 	"net/http"
 )
 
