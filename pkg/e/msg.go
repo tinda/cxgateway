@@ -3,11 +3,11 @@ package e
 import "time"
 
 type Response struct {
-	StatusId      int         `json:"status_id"`
+	StatusId      int         `json:"statusId"`
 	Code          int         `json:"code"`
-	StatusMessage string      `json:"message"`
-	dateTime      time.Time   `json:"time"`
-	ResponseData  interface{} `json:"data"`
+	StatusMessage string      `json:"statusMessage"`
+	DateTime      time.Time   `json:"dateTime"`
+	ResponseData  interface{} `json:"responseData"`
 }
 
 type APIException struct {
@@ -62,7 +62,7 @@ func newResponse(statusId int, code int, message string, time time.Time, data in
 		StatusId:      statusId,
 		Code:          code,
 		StatusMessage: message,
-		dateTime:      time,
+		DateTime:      time,
 		ResponseData:  data,
 	}
 }
